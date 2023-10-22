@@ -83,7 +83,7 @@ export default function BasicModal({ open, handleClose }) {
               assignee={task.assignedTo}
               onAssigneeChange={handleChange}
             />
-            <StatusDropdown task={task} onChange={handleChange} />
+            {task.id && <StatusDropdown task={task} onChange={handleChange} />}
             <Button
               variant="contained"
               color="primary"

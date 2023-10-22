@@ -96,6 +96,12 @@ export default function BasicModal({ open, handleClose }) {
             </Button>
             <p className="text-red-800 text-center">{error}</p>
           </form>
+          <div className="text-sm">
+            <p>
+              Created at {new Date(task.createdAt).toLocaleString()} by{" "}
+              {users.filter((u) => u.id === task.createdBy)[0].name}
+            </p>
+          </div>
         </Box>
       </Modal>
     </div>

@@ -109,7 +109,7 @@ export const taskSlice = createSlice({
         state.tasks = state.tasks.map((task) =>
           task.id === action.payload.id ? action.payload : task
         );
-        if (!state.task.id) state.tasks = [...state.tasks, action.payload];
+        if (!state.task.id) state.tasks = [action.payload, ...state.tasks];
         state.task = initialState.task;
       });
   },

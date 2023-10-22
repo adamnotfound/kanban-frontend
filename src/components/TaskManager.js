@@ -20,7 +20,7 @@ export function TaskManager() {
 
   return (
     <div style={{ height: "100vh", width: "100%" }}>
-      <div className="w-full bg-indigo-200 p-3 border-b border-indigo-200">
+      <div className="w-full text-center bg-indigo-200 p-3 border-b border-indigo-200">
         <button className="text-lg" onClick={(e) => dispatch(showModal())}>
           Create new task
         </button>
